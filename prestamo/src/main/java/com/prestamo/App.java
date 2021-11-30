@@ -14,7 +14,7 @@ public class App {
   public static void main(String[] args) throws IOException, InterruptedException, ExecutionException{
   
         try {
-          File directorio = new File("/home/gibran/Desktop/universidad/Programación Avanzada/prestamos-java/prestamo/src/main/java/com/prestamo/db/input_dividido");
+          File directorio = new File("./src/main/java/com/prestamo/db/input_dividido");
           if (!directorio.exists()) {
               if (directorio.mkdirs()) {
                   System.out.println("Directorio creado");

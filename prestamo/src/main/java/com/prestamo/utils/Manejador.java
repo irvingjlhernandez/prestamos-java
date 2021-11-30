@@ -14,20 +14,19 @@ public class Manejador {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
         int i,j;
         BufferedReader archivoNormal = null;
         ArrayList<ArrayList<String>> estructuraFiltrada = new ArrayList<>();
         String columnas = "";
         String filtrado = "";
         String[] campos = null;
-        String ruta = "C://Users/Irving/Documents/Maestria/Materias/Primer Semestre/Programacion Avanzada/Proyecto/";
-        String nombreArchivo = "pruebas.csv";
+        String ruta = "./src/main/java/com/prestamo/db/";
+        String nombreArchivo = "211129COVID19MEXICO.csv";
         String linea;
-        String[] camposAuxiliar = null;
         
         try{
-            File archivoMenor = new File(ruta, nombreArchivo);
+            File archivoMenor = new File("./src/main/java/com/prestamo/db/211129COVID19MEXICO.csv");
             archivoNormal = new BufferedReader (new FileReader(archivoMenor));
             linea = archivoNormal.readLine();
             campos = linea.split(",");
@@ -58,7 +57,7 @@ public class Manejador {
         Scanner filtroEscaner = new Scanner (System.in);
         filtrado = filtroEscaner.nextLine ();
         
-        estructuraFiltrada = Filtros.filtarArchivo(ruta, "pruebas.csv", filtrado,columnas, campos);
+        estructuraFiltrada = Filtros.filtarArchivo(ruta, nombreArchivo, filtrado,columnas, campos);
         for(i=0;i<estructuraFiltrada.size();i++){
             for(j=0;j<estructuraFiltrada.get(i).size();j++){
                 System.out.print(estructuraFiltrada.get(i).get(j));

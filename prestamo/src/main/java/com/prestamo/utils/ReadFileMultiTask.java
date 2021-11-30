@@ -13,8 +13,8 @@ import java.util.stream.Stream;
 
 
 public class ReadFileMultiTask {
-    Path path = Paths.get("/home/gibran/Desktop/universidad/Programación Avanzada/prestamos-java/prestamo/src/main/java/com/prestamo/db/211129COVID19MEXICO.csv");
-    Path path_folder = Paths.get("/home/gibran/Desktop/universidad/Programación Avanzada/prestamos-java/prestamo/src/main/java/com/prestamo/db/input_dividido/");
+    Path path = Paths.get("./src/main/java/com/prestamo/db/211129COVID19MEXICO.csv");
+    Path path_folder = Paths.get("./src/main/java/com/prestamo/db/input_dividido/");
         
     public void execute() throws IOException, InterruptedException, ExecutionException {
         useForkJoinPool(path,path_folder);

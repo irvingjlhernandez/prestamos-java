@@ -41,7 +41,6 @@ public class ReadFileTask extends RecursiveTask<Integer> {
                 try (BufferedReader reader = Files.newBufferedReader(f.toPath())) {
                     String line = null;
                     while ((line = reader.readLine()) != null) {
-                        // processLine(line);
                         all++;
                     }
                 } catch (IOException e) {

@@ -18,7 +18,7 @@ public class CrearArchivo {
     }
 
     public void crearArchivo() throws IOException{
-        File doc = new File("/home/gibran/Desktop/universidad/Programación Avanzada/prestamos-java/prestamo/src/main/java/com/prestamo/db/211129COVID19MEXICO.csv");
+        File doc = new File("./src/main/java/com/prestamo/db/211129COVID19MEXICO.csv");
         obj = new BufferedReader(new FileReader(doc));
         String strng;
         int aux = 0;
@@ -39,7 +39,7 @@ public class CrearArchivo {
         SyncWriter writer = null;
         ExecutorService pool = Executors.newFixedThreadPool(num_cores);
         for(int i = 0;i<num_cores;i++){ 
-        writer = new SyncWriter("/home/gibran/Desktop/universidad/Programación Avanzada/prestamos-java/prestamo/src/main/java/com/prestamo/db/dataset.csv",i);
+        writer = new SyncWriter("./src/main/java/com/prestamo/db/211129COVID19MEXICO.csv",i);
         pool.submit(new DividirArchivo(writer,lista_archivos.get(i)));
         }
         pool.shutdown();

@@ -12,7 +12,7 @@ import java.io.FileWriter;
 public class WriteFileTask {
     
     public void CrearDirectorio(){
-        File directorio = new File("/home/gibran/Desktop/universidad/Programación Avanzada/prestamos-java/prestamo/src/main/java/com/prestamo/db/resultado");
+        File directorio = new File("./src/main/java/com/prestamo/db/resultado/");
         if (!directorio.exists()) {
             if (directorio.mkdirs()) {
                 System.out.println("Directorio creado");
@@ -23,7 +23,7 @@ public class WriteFileTask {
     }
 
     public String CrearNombre(){
-        String path = "/home/gibran/Desktop/universidad/Programación Avanzada/prestamos-java/prestamo/src/main/java/com/prestamo/db/resultado/";
+        String path = "./src/main/java/com/prestamo/db/resultado/";
         LocalDateTime hoy = LocalDateTime.now();
         int ano = hoy.getYear();
         int mes = hoy.getMonthValue();
@@ -43,8 +43,7 @@ public class WriteFileTask {
     public void CrearArchivo(){
         String nombre_archivo = CrearNombre();          
         try{ 
-            String [] record = "2,Virat,Kohli,India,30".split(",");
-                                
+            String [] record = "2,Virat,Kohli,India,30".split(",");                 
             FileWriter mFileWriter = new FileWriter(nombre_archivo, false);
             CSVWriter writer = new CSVWriter(mFileWriter);
             writer.writeNext(record);  

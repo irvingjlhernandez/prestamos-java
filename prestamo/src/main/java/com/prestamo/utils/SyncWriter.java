@@ -36,7 +36,7 @@ public class SyncWriter {
     }
 
     public void crearArchivo(List<String[]> stringList){
-        String nombre_archivo ="/home/gibran/Desktop/universidad/Programación Avanzada/prestamos-java/prestamo/src/main/java/com/prestamo/db/input_dividido/"
+        String nombre_archivo ="./src/main/java/com/prestamo/db/input_dividido/"
                                 +String.valueOf(this.id)
                                 +".csv";          
         try{ 
