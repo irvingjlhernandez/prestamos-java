@@ -7,10 +7,7 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- *
- * @author Irving
- */
+
 public class Manejador {
 
     /**

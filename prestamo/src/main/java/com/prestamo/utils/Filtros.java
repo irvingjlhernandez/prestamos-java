@@ -8,10 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
-/**
- *
- * @author Irving
- */
+
 public class Filtros {
     public static ArrayList<ArrayList<String>> filtarArchivo(String rutaAbsoluta, String nombreArchivo, String criterios,String columnas, String[] campos){
         int i,aux;

@@ -1,22 +1,11 @@
 package com.prestamo.utils;
 
-import com.opencsv.CSVReader;
+
 import com.opencsv.CSVWriter;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.List;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ForkJoinPool;
-import java.util.concurrent.ForkJoinTask;
-import java.util.stream.Stream;
 import  java.time.LocalDateTime;
-import java.io.FileReader;
 import java.io.FileWriter;
 
 
@@ -52,8 +41,7 @@ public class WriteFileTask {
         return nombre_archivo;
     }
     public void CrearArchivo(){
-        String nombre_archivo = CrearNombre();
-                        
+        String nombre_archivo = CrearNombre();          
         try{ 
             String [] record = "2,Virat,Kohli,India,30".split(",");
                                 
