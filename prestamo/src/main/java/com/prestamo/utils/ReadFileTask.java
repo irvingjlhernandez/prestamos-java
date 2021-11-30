@@ -50,7 +50,4 @@ public class ReadFileTask extends RecursiveTask<Integer> {
         }
         return all;
     }
- 
-// getter setter
- 
 }
