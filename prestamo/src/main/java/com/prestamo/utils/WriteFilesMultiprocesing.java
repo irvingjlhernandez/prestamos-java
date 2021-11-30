@@ -1,12 +1,14 @@
 package com.prestamo.utils;
 
-public class WriteFilesMultiprocesing implements Runnable{
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
-    //COLA DE LINEAS DE ARHIVO, sacar y escribir en su archivo correspondiente
+public class WriteFilesMultiprocesing implements Runnable{
+    Path path = Paths.get("./src/main/java/com/prestamo/db/dataset.csv");
     
     @Override
     public void run() {
-        // TODO Auto-generated method stub    
+          
     }
     
 }

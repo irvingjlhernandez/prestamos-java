@@ -23,12 +23,12 @@ public class ReadFileTask extends RecursiveTask<Integer> {
     protected Integer compute() {
         int all = 0;
         int size = files.length;
-        // Usa ideas de árboles binarios para dividir subtareas
+        
         if (size > THRESHOLD) {
             int mid = size / 2;
             ForkJoinTask<Integer> left = new ReadFileTask(Arrays.copyOfRange(files, 0, mid)).fork();
             ForkJoinTask<Integer> right = new ReadFileTask(Arrays.copyOfRange(files, mid, size)).fork();
-                         // Espera al final de la subtarea para contar los datos
+                         
             left.join();
             right.join();
             try {
@@ -41,7 +41,6 @@ public class ReadFileTask extends RecursiveTask<Integer> {
                 try (BufferedReader reader = Files.newBufferedReader(f.toPath())) {
                     String line = null;
                     while ((line = reader.readLine()) != null) {
-                        // processLine(line);
                         all++;
                     }
                 } catch (IOException e) {
@@ -50,7 +49,4 @@ public class ReadFileTask extends RecursiveTask<Integer> {
         }
         return all;
     }
- 
-// getter setter
- 
 }

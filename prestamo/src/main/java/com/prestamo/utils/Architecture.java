@@ -3,6 +3,7 @@ package com.prestamo.utils;
 import java.util.Objects;
 import java.util.Set;
 
+
 public class Architecture {
 
     int cores = Runtime.getRuntime().availableProcessors();
@@ -65,5 +66,4 @@ public class Architecture {
             ", threads='" + getThreads() + "'" +
             "}";
     }
-
 }
